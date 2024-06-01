@@ -1,0 +1,85 @@
+const http = require('node:http');
+const hostname = '127.0.0.2';
+const port = 3000;
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.end(`<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <link rel="stylesheet" href="delhistyle.css">
+      <title>IT Company || Home Page</title>
+    </head>
+    <body>
+      <header>
+        <div class="main-nav">
+          <a href="vikhyaat.html" class="logo">Vikhyaat</a>
+          <ul>
+            <li><a href="vikhyaat.html">Home</a></li>
+            <li><a href="service.html">Photos</a></li>
+            <li><a href="work.html">Destinations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="sub-nav">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100073317677149"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/antra_sinha3?t=kvCmIVfJ0jJfN_xO57EJBg&s=09">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/antra_s_i_n_h_a?igshid=MzNlNGNkZWQ4Mg==">
+                <i class="fab fa-instagram-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      
+     
+      <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">Come and Visit BIHAR-An Abode of Peace!!</p>
+                <p class="text-small">Bihar's antiquity is evident from its name, which is derived from the ancient word "VIHARA" (monastery). It is indeed a land of monasteries. Hindu, Buddhist, Jain, Muslim and Sikh shrines abound in this ancient land where India's first major empires rose and fell. Where the ruins of the worlds' earliest university slumbers in the void of time.</p>
+                <div class="button">
+                  <button class="btn"><a href="facts.html"> View History </a></button>
+                 
+              </div>
+            </div>
+           
+            <div class="secondHalf">
+                <img src="D:\Pictures\PicsArt_11-21-02.13.55.jpg" alt="laptop image">
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+      <div class="container">
+          
+                      <p>Copyright &copy; 2023 | All Right Reserved</p>
+                 
+      </div>
+  </footer>
+  
+    <script src="delhijs.js"></script>
+    </body>
+  </html>`);
+});
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
